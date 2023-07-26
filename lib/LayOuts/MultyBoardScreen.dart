@@ -4,7 +4,6 @@ import 'package:xogame/Cubit/States.dart';
 import 'package:xogame/Cubit/cubit.dart';
 
 import '../Components.dart';
-import 'MainScreens.dart';
 
 // ignore: must_be_immutable
 class MultyBoardScreen extends StatelessWidget {
@@ -21,10 +20,9 @@ class MultyBoardScreen extends StatelessWidget {
               icon: const Icon(Icons.arrow_back),
               color: Colors.black,
               onPressed: () {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const MainScreens()));
+                Navigator.pop(
+                  context,
+                );
               },
             ),
             title: const Text(

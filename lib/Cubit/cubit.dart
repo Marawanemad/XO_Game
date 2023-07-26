@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -187,7 +188,11 @@ class XOCubit extends Cubit<XoAppStates> {
       int randomIndex = random.nextInt(emptyCell.length);
       index = emptyCell[randomIndex];
     }
-    if (checkWinner() == '') ChangeOnPressed(index);
+    if (checkWinner() == '')
+      // to make delay in autoPlay not playing with user
+      Timer(const Duration(milliseconds: 250), () {
+        ChangeOnPressed(index);
+      });
     emit(ChangeOnPressedState());
   }
 

@@ -3,7 +3,6 @@ import 'package:xogame/Cubit/States.dart';
 import 'package:xogame/Cubit/cubit.dart';
 import '../Components.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'MainScreens.dart';
 
 class SingleBoardScreen extends StatelessWidget {
   const SingleBoardScreen({super.key});
@@ -18,8 +17,9 @@ class SingleBoardScreen extends StatelessWidget {
             icon: const Icon(Icons.arrow_back),
             color: Colors.black,
             onPressed: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) => const MainScreens()));
+              Navigator.pop(
+                context,
+              );
             },
           ),
           title: const Text(

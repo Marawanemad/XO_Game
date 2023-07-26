@@ -7,63 +7,62 @@ Widget ChooseGameShape(
     required pageName,
     required context,
     required cubit}) {
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-      Container(
-        width: 115,
-        height: 125,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(50),
-          color: imageColor,
-        ),
-        child: Image(
-          image: AssetImage(image),
-        ),
-      ),
-      InkWell(
-        onTap: () {
-          cubit.playerName != ''
-              ? Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => pageName))
-              : showDialog(
-                  context: context,
-                  builder: (context) => AlertDialog(
-                    title: const Text(
-                      "Alert Message",
-                    ),
-                    content: SizedBox(
-                        height: 150,
-                        child: Column(
-                          children: [
-                            const Divider(
-                              color: Colors.black,
+  return InkWell(
+    onTap: () {
+      cubit.playerName != ''
+          ? Navigator.push(
+              context, MaterialPageRoute(builder: (context) => pageName))
+          : showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                title: const Text(
+                  "Alert Message",
+                ),
+                content: SizedBox(
+                    height: 150,
+                    child: Column(
+                      children: [
+                        const Divider(
+                          color: Colors.black,
+                        ),
+                        const SizedBox(height: 25),
+                        const Text('Player Name must not be Empty'),
+                        const Spacer(),
+                        SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStateColor.resolveWith(
+                                    (states) => const Color.fromRGBO(
+                                        197, 197, 197, 0.525))),
+                            onPressed: () => Navigator.of(context).pop(),
+                            child: const Text(
+                              "Close",
+                              style: TextStyle(color: Colors.black),
                             ),
-                            const SizedBox(height: 25),
-                            const Text('Player Name must not be Empty'),
-                            const Spacer(),
-                            SizedBox(
-                              width: double.infinity,
-                              child: ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor:
-                                        MaterialStateColor.resolveWith(
-                                            (states) => const Color.fromRGBO(
-                                                197, 197, 197, 0.525))),
-                                onPressed: () => Navigator.of(context).pop(),
-                                child: const Text(
-                                  "Close",
-                                  style: TextStyle(color: Colors.black),
-                                ),
-                              ),
-                            )
-                          ],
-                        )),
-                  ),
-                );
-          cubit.repeatGame();
-        },
-        child: Container(
+                          ),
+                        )
+                      ],
+                    )),
+              ),
+            );
+      cubit.repeatGame();
+    },
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          width: 115,
+          height: 125,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(50),
+            color: imageColor,
+          ),
+          child: Image(
+            image: AssetImage(image),
+          ),
+        ),
+        Container(
           height: 40,
           width: 130,
           decoration: const BoxDecoration(
@@ -77,9 +76,9 @@ Widget ChooseGameShape(
               style: const TextStyle(color: Colors.white),
             ),
           ),
-        ),
-      )
-    ],
+        )
+      ],
+    ),
   );
 }
 
