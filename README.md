@@ -7,9 +7,9 @@ A new Flutter project.
 
 <table>
   <tr>
-    <td align="start"><img width=30% src="https://github.com/Marawanemad/XO_Game/assets/88719313/1ffa266c-a577-4f6c-b53d-3681b5aa903b"></td>
-    <td align="center"><img width=30% src="https://github.com/Marawanemad/XO_Game/assets/88719313/a0f539ec-9409-4634-b72f-d31d1e8b0d5c"></td>
-    <td align="end"><img width=30% src="https://github.com/Marawanemad/XO_Game/assets/88719313/3845d676-1635-4591-9f4f-d7505cca48cc"></td>
+    <td align="center"><img width=100% src="https://github.com/Marawanemad/XO_Game/assets/88719313/1ffa266c-a577-4f6c-b53d-3681b5aa903b"></td>
+    <td align="center"><img width=100% src="https://github.com/Marawanemad/XO_Game/assets/88719313/a0f539ec-9409-4634-b72f-d31d1e8b0d5c"></td>
+    <td align="center"><img width=100% src="https://github.com/Marawanemad/XO_Game/assets/88719313/3845d676-1635-4591-9f4f-d7505cca48cc"></td>
   </tr>
 </table>
   
