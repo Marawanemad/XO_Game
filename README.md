@@ -4,7 +4,6 @@ A new Flutter project.
 
 ## Application Screens
 
-
 <table>
   <tr>
     <td align="center"><img width=100% src="https://github.com/Marawanemad/XO_Game/assets/88719313/1ffa266c-a577-4f6c-b53d-3681b5aa903b"></td>
